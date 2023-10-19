@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "f57b3efb-37e7-4eef-8063-8ddf71471a97",
+		"name": "Grade Submission",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23489999"
+	},
+	"item": [
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "C",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Sushant\",\n    \"birthDate\":\"2000-12-03\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/student"
+					},
+					"response": []
+				},
+				{
+					"name": "get 1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Sushant\",\n    \"birthDate\":\"2000-12-03\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/student/2"
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Sushant\",\n    \"birthDate\":\"2000-12-03\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/student/all"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/student/1"
+					},
+					"response": []
+				},
+				{
+					"name": "get enrolled courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/student/1/course"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Grade",
+			"item": [
+				{
+					"name": "set",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"score\":\"A+\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/grade/student/1/course/4"
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/grade/student/1/course/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/grade/student/1/course/4"
+					},
+					"response": []
+				},
+				{
+					"name": "get student grades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get coursewise grades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				},
+				{
+					"name": "read all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/grade/all"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "New request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"subject\": \"Math\",\n    \"code\": \"M6\",\n    \"description\": \"Matrix  integration\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/course"
+					},
+					"response": []
+				},
+				{
+					"name": "get aol",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/course/all"
+					},
+					"response": []
+				},
+				{
+					"name": "Enroll studen to course",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "http://localhost:8080/course/2/student/4"
+					},
+					"response": []
+				},
+				{
+					"name": "get course student",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"sushant\",\n    \"password\":\"Sushant@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/user/register"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"sushant\",\n    \"password\":\"Sushant@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/authenticate"
+					},
+					"response": []
+				},
+				{
+					"name": "New request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/user/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
